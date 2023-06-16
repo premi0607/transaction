@@ -1,0 +1,24 @@
+<body>
+    <div class="container" *ngFor = "let c of carddetail">
+        <div class="info">
+            <p><span >Account Balance 💰</span></p>
+           <h3>{{c.Balance}}</h3>
+       
+           <br>
+        </div>
+    </div>
+<div class="container" *ngFor = "let c of carddetail">
+    <div class="info">
+       <h3>{{c.AccNumber}} </h3>
+       <p><span >Account Holder Name</span></p>
+       <p>{{c.AccHolder}}</p><br>
+       <p><span >Date of Expiry  </span></p>
+       <p>{{c.ExpiryDate}}</p>
+       <br>
+     </div>
+</div><br>
+
+
+</body>
+
+

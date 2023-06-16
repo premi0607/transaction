@@ -1,0 +1,19 @@
+.container {
+    max-width: 800px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 3px 50px 50px 0px rgba(50, 6, 245, 0.1);
+    background-color: rgb(222, 33, 105);
+    color: aliceblue;
+    padding:50px
+  }
+  body {
+    font-family:Tahoma, sans-serif;
+   
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    align-content: center;
+  }
