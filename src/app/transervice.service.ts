@@ -12,8 +12,8 @@ export class TranserviceService {
     return this.http.put('https://648a952117f1536d65e94eb1.mockapi.io/expense'+'/'+id, expense)
   }
 
-  createExpense(newmovie:any){
-    return this.http.post('https://648a952117f1536d65e94eb1.mockapi.io/expense', newmovie) .subscribe((val: any) => {
+  createExpense(newexpense:any){
+    return this.http.post('https://648a952117f1536d65e94eb1.mockapi.io/expense', newexpense) .subscribe((val: any) => {
     });
   }
 }

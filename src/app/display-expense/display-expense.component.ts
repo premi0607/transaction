@@ -47,17 +47,6 @@ export class DisplayExpenseComponent {
     this.router.navigate(['updateexpense',id]);
   }
 
-  AddExpense(name:string,amount:string,date:string,desc:string){
-    this.newmovie.name = name;
-    this.newmovie.amount = amount;
-    this.newmovie.date= date;
-    this.newmovie.desc = desc;
-    
-    this.transService.createExpense(this.newmovie);
-    this.getMovie();
-  
-
-  }
 
   getMovie(){
 

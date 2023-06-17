@@ -1,15 +1,5 @@
 <br>
 <body>
-
-<div class="form">
-    <h2>Add Expenses</h2>
-    <input type="text" #name placeholder="Enter Expense Name"><br>
-    <input type="text" #amount placeholder="Enter the amount"><br>
-    <input type="text" #date placeholder="Enter the deadline"><br>
-    <input type="text" #desc placeholder="Enter Summary of the Expense"><br>
-    <input type="submit" value="Submit" (click)="AddExpense(name.value,amount.value,date.value,desc.value)">
-  
-</div>
 <div class="expenselist">
     <div class="container" *ngFor = "let ex of expense">
         
@@ -25,7 +15,6 @@
            <br>
          </div>
     </div>
-
 
 </div>
 </body>   
