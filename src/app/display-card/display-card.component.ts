@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { TranserviceService } from '../transervice.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-display-card',
@@ -6,15 +10,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./display-card.component.css']
 })
 export class DisplayCardComponent {
-  newBalance:any;
-  tot:any;
-  carddetail=[{
-    "AccHolder":"Premikkha S",
-    "Balance":15000,
-    "AccNumber":"4321 5642 1229 2367",
-    "ExpiryDate":"10/23"
-  }];
+  outcome:number=0;
+  income:number=65000;
+  expense:any;
+  newBalance:any=0;
 
+  constructor(private http: HttpClient,  private router:Router, private transService: TranserviceService) {}
+  ngOnInit() {
+    this.http
+      .get('https://648a952117f1536d65e94eb1.mockapi.io/expense')
+      .subscribe((val: any) => {
+        this.expense = val;
+        console.log(this.expense);
+        this.getamt();
+      });
 
-
+  }
+  getamt(){
+    for (var val of this.expense){
+      this.outcome += val.amount;
+    }
+    this.newBalance=this.income-this.outcome;
+  }
 }

@@ -21,14 +21,30 @@
 }
 
 .container {
+  padding: 20px;
   position: relative;
   width: 100%;
   max-width: 400px;
-  top: 50%;
+  top: 400px;
   left: 50%;
   transform: translate(-130%, -130%);
   -ms-transform: translate(-50%, -50%);
+  
 }
 .example-card{
-  background-color: rgb(252, 248, 174);
+  padding: 20px;
+  color: rgb(18, 18, 18);
+  /* background-image: linear-gradient(to right, rgb(102, 3, 66) , rgb(12, 8, 94)); */
+  box-shadow: 5px 5px 10px 10px rgba(240, 139, 213, 0.374);
+  
 }
+
+.content{
+  color: rgb(120, 122, 124);
+  font-size: 15px;
+}
+
+.info{
+  background-color: rgb(215, 218, 220);
+}
+

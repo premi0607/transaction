@@ -32,7 +32,6 @@ export class CreateExpenseComponent {
     {
       this.newexpense = this.expenseForm.value;
       this.transService.createExpense(this.newexpense);
-      console.log(this.newexpense)
     }
 
   }
